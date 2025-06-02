@@ -1,6 +1,6 @@
+
+
 This is a sample usage of helm chart.
-
 You can view the installed helm chart using
-
 # helm list
 
