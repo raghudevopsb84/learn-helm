@@ -4,6 +4,6 @@ metadata:
   name: {{ .Release.Name }}
 data:
   test: test123
-  name: {{.Files.Get name }}
+  name: {{ index .Files "file.name" }}
 
 
