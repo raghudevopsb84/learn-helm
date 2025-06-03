@@ -5,7 +5,7 @@ metadata:
 data:
   test: test123
   name: {{ .Files.Get "files/new.txt" }}
-  index: "{{ index .Files "files/new.txt" | toString }}"
+  index: "{{ index .Files "files/new.txt" }}"
   bytes: "{{ .Files.GetBytes "files/new.txt" }}"
 
 
