@@ -24,7 +24,7 @@ data:
 {{- if eq .Values.drink "coffee" }}
   mug: "true"
 {{ end -}}
-  {{ if eq .Values.drink "coffee" }}
+  {{- if eq .Values.drink "coffee" }}
   mug1: "true"
   {{- end}}
   myvalue: "Hello World"
