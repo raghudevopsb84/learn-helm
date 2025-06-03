@@ -10,4 +10,9 @@ favorite:
   drink: "coffee"
   food: "PIZZA"
 
+fruits:
+  - apple
+  - banana
+
+
 

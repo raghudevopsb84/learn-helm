@@ -40,4 +40,7 @@ data:
   drink: {{ .drink | default "tea" | quote }}
   food: {{ .food | upper | quote }}
   {{- end }}
-
+  fruits: |
+        {{- range .Values.fruits }}
+        {{ . | title | quote }}
+        {{- end }}
