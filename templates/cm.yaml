@@ -14,14 +14,6 @@ kind: ConfigMap
 metadata:
   name: {{ .Release.Name }}-1
 data:
-  {{ .Files.Get "files/new.txt".AsConfig }}
-
----
-apiVersion: v1
-kind: Secret
-metadata:
-  name: {{ .Release.Name }}-1
-data:
-  {{ (.Files.Get "files/new.txt").AsSecrets }}
+  {{ (.Files.Glob "files/*.txt").AsConfig }}
 
 
