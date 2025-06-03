@@ -12,6 +12,6 @@ data:
   number: {{ quote .Values.number }}
   number1: {{ .Values.number | quote }}
   number2: "{{ .Values.number }}"
-
+  equal: {{ eq .Values.x1 .Values.x2 }}
 
 
