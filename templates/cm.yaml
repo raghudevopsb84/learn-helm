@@ -45,6 +45,8 @@ data:
     {{ . | title | quote }}
     {{- end }}
   files:
-    {{- range range $k, $v := .Files.Glob "files/*.txt" }}
-    {{ $k }}
+    {{- range $path, $_ := .Files.Glob "files/*.txt" }}
+    {{ base $path }}
     {{- end }}
+
+
