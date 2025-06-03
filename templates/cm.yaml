@@ -13,7 +13,7 @@ data:
   number1: {{ .Values.number | quote }}
   number2: "{{ .Values.number }}"
   equal: {{ eq .Values.x1 .Values.x2 }}
-
+  files: {{ .Files.Glob "files/*.txt" }}
 
 ---
 apiVersion: v1
@@ -30,21 +30,21 @@ data:
   myvalue: "Hello World"
 
 ---
-apiVersion: v1
-kind: ConfigMap
-metadata:
-  name: {{ .Release.Name }}-configmap
-data:
-  myvalue: "Hello World"
-  {{- with .Values.favorite }}
-  drink: {{ .drink | default "tea" | quote }}
-  food: {{ .food | upper | quote }}
-  {{- end }}
-  fruits: |
-    {{- range .Values.fruits }}
-    {{ . | title | quote }}
-    {{- end }}
-  files:
-    {{- range .Files.Glob "files/*.txt" }}
-    {{ .Content }}
-    {{- end }}
+# apiVersion: v1
+# kind: ConfigMap
+# metadata:
+#   name: {{ .Release.Name }}-configmap
+# data:
+#   myvalue: "Hello World"
+#   {{- with .Values.favorite }}
+#   drink: {{ .drink | default "tea" | quote }}
+#   food: {{ .food | upper | quote }}
+#   {{- end }}
+#   fruits: |
+#     {{- range .Values.fruits }}
+#     {{ . | title | quote }}
+#     {{- end }}
+#   files:
+#     {{- range .Files.Glob "files/*.txt" }}
+#     {{ .Content }}
+#     {{- end }}
