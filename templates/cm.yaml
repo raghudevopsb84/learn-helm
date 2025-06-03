@@ -21,7 +21,7 @@ kind: ConfigMap
 metadata:
   name: {{ .Release.Name }}-1
 data:
-{{ if eq .Values.drink "coffee" }}
+{{- if eq .Values.drink "coffee" }}
   mug: "true"
 {{ end }}
   myvalue: "Hello World"
