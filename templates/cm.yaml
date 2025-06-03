@@ -7,6 +7,13 @@ data:
   name: {{ .Files.Get "files/new.txt" }}
   index: "{{ index .Files "files/new.txt" | toString }}"
   bytes: "{{ .Files.GetBytes "files/new.txt" }}"
-  glob: {{ .Files.Glob "files/*.txt" | toString }}
+
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: {{ .Release.Name }}-1
+data:
+  {{ .Files.Glob "files/*.txt".AsConfig }}
 
 
