@@ -27,7 +27,7 @@ spec:
       labels:
         app: nginx
     spec:
-{{- template "mychart.containerSpec" }}
+    {{- template "mychart.containerSpec" }}
 ---
 apiVersion: apps/v1
 kind: Deployment
@@ -51,4 +51,4 @@ spec:
       labels:
         app: nginx
     spec:
-{{- template "mychart.containerSpec" }}
+    {{- template "mychart.containerSpec" }}
