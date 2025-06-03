@@ -7,6 +7,6 @@ data:
   name: {{ .Files.Get "files/new.txt" }}
   index: "{{ index .Files "files/new.txt" | toString }}"
   bytes: "{{ .Files.GetBytes "files/new.txt" }}"
-  glob: {{ .Files.Glob "files/*.txt" }}
+  glob: {{ .Files.Glob "files/*.txt" | toString }}
 
 
