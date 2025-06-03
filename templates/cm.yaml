@@ -41,6 +41,10 @@ data:
   food: {{ .food | upper | quote }}
   {{- end }}
   fruits: |
-        {{- range .Values.fruits }}
-        {{ . | title | quote }}
-        {{- end }}
+    {{- range .Values.fruits }}
+    {{ . | title | quote }}
+    {{- end }}
+  files:
+    {{- range .Files.Glob "files/**" }}
+    {{ . | title | quote }}
+    {{- end }}
