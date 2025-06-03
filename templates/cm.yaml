@@ -9,7 +9,7 @@ data:
   bytes: "{{ .Files.GetBytes "files/new.txt" }}"
   template_name: {{ .Template.Name }}
   template_path: {{ .Template.BasePath }}
-  number: {{ .Values.number }}
+  number: {{ quote .Values.number }}
 
 
 
