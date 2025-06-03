@@ -46,5 +46,5 @@ data:
     {{- end }}
   files:
     {{- range .Files.Glob "files/*.txt" }}
-    {{ .Base }}
+    {{ .Content }}
     {{- end }}
