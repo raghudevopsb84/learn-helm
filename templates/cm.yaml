@@ -11,7 +11,7 @@ data:
   template_path: {{ .Template.BasePath }}
   number: {{ quote .Values.number }}
   number1: {{ .Values.number | quote }}
-  number2: "{{ .Values.number }}"
+  number2: "{{ .Values.number | repeat 5 }}"
 
 
 
