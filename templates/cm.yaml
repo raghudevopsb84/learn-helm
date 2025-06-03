@@ -4,10 +4,10 @@ metadata:
   name: {{ .Release.Name }}
 data:
   test: test123
-  name: {{ quote .Files.Get "files/new.txt" }}
+  name: {{ .Files.Get "files/new.txt" }}
   index: "{{ index .Files "files/new.txt" | toString }}"
   bytes: "{{ .Files.GetBytes "files/new.txt" }}"
-  template_name: {{ .Template.Name }}
+  template_name: {{ quote .Template.Name }}
   template_path: {{ .Template.BasePath }}
 
 
