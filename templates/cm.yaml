@@ -48,5 +48,5 @@ data:
     {{- range $k, $v := .Files.Glob "files/*.txt" }}
     {{ $k }}
     --------
-    {{ $v }}
+    {{ $v | toString }}
     {{- end }}
