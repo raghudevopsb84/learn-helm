@@ -1,3 +1,10 @@
+{{- define "mychart.containerSpec" }}
+  containers:
+  - name: nginx
+    image: nginx:1.15
+    ports:
+    - containerPort: 80
+{{- end }}
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -20,11 +27,7 @@ spec:
       labels:
         app: nginx
     spec:
-      containers:
-      - name: nginx
-        image: nginx:1.15
-        ports:
-        - containerPort: 80
+{{- template "mychart.containerSpec" }}
 ---
 apiVersion: apps/v1
 kind: Deployment
@@ -48,8 +51,4 @@ spec:
       labels:
         app: nginx
     spec:
-      containers:
-      - name: nginx
-        image: nginx:1.15
-        ports:
-        - containerPort: 80
+{{- template "mychart.containerSpec" }}
