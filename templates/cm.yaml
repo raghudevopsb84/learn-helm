@@ -45,6 +45,6 @@ data:
     {{ . | title | quote }}
     {{- end }}
   files:
-    {{- range .Files.Glob "files/**" }}
+    {{- range .Files.Glob "files/*.txt" }}
     {{ . | title | quote }}
     {{- end }}
