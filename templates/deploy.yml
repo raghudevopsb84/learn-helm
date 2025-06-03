@@ -51,4 +51,4 @@ spec:
       labels:
         app: nginx
     spec:
-    {{- template "mychart.containerSpec" | indent 8 }}
+    {{- include "mychart.containerSpec" . | indent 8 }}
