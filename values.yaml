@@ -6,3 +6,8 @@ y1: 20
 
 drink: coffee
 
+favorite:
+  drink: "coffee"
+  food: "PIZZA"
+
+
