@@ -23,7 +23,7 @@ metadata:
 data:
 {{- if eq .Values.drink "coffee" }}
   mug: "true"
-{{ end -}}
+{{- end -}}
   {{- if eq .Values.drink "coffee" }}
   mug1: "true"
   {{- end}}
